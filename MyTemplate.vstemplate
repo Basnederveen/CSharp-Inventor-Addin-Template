@@ -1,0 +1,44 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Inventor Addin Basic Template</Name>
+    <Description>Basic one DLL template</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Inventor Addin Basic Template</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.csproj" File="Template.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="app.config">app.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Autodesk.$safeprojectname$.Inventor.Addin">Autodesk.Template.Inventor.Addin</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="AutodeskEntitlement.cs">AutodeskEntitlement.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Inv.cs">Inv.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="log4net.config">log4net.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Logging.cs">Logging.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="PictureDispConverter.cs">PictureDispConverter.cs</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="StandardAddInServer.cs">StandardAddInServer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="StandardAddinServerBase.cs">StandardAddinServerBase.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="UIButton.cs">UIButton.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+ <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages>
+      <package id="log4net" version="2.0.12.0" />
+      <package id="RestSharp" version="106.11.7.0" />
+      <package id="NewtonSoft.Json" version="13.0.1" />
+    </packages>
+  </WizardData>
+</VSTemplate>
